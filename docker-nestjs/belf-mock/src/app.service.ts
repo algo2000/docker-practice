@@ -9,10 +9,9 @@ export class AppService {
    * @returns 잔디 데이터
    */
   getPlantingGlass(id: string): Glass[] {
-
     var result: Glass[] = [];
     let now = new Date();
-    for (let index = 0; index < 24 * 7; index++) {
+    for (let index = 0; index < 24 * 7 - (7 - now.getDay() - 1); index++) {
       let date = new Date();
       let g: Glass = {
         date: new Date(date.setDate(now.getDate() - index)).getTime(),

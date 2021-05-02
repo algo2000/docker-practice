@@ -1,3 +1,5 @@
+## docker build -t lee/nest-mock .
+## docker run -d -p 3001:3000 --name mock  lee/nest-mock
 FROM node:10 AS builder
 WORKDIR /app
 ## 프로젝트의 모든 파일을 WORKDIR(/app)로 복사한다
